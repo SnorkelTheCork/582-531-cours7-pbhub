@@ -24,19 +24,19 @@ void loop() {
 
   if (maLectureBouton == 1) {
     keyPixel = CRGB(0, 0, 0);
-    FastLED.show();
   } else {
-    keyPixel = CRGB(175,255,0);
-    FastLED.show();
+    //Fonction random
+    int rouge = random(0, 256);
+    int vert = random(0, 256);
+    keyPixel = CRGB(rouge,vert,0);
   }
 
   if (maLectureButton == 1) {
     pixelAtom = CRGB(0, 0, 0);
-    FastLED.show();
   } else {
     pixelAtom = CRGB(255, 25, 0);
-    FastLED.show();
   }
   
+  FastLED.show();
   delay(20);
 }
